@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "qiskit-transpiler-tools"
+version = "0.0.0"
+description = "Basic qiskit tools to streamline transpilation"
+authors = ["Mazen Ali <mazen.ali@itwm.fraunhofer.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.23.0"
+qiskit = "^0.37.0"
+mapomatic = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+python-semantic-release = "^7.29.4"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
