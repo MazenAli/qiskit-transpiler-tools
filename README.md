@@ -50,7 +50,7 @@ qc_list_trans2 = transpiler2.transpile(qc_list + [qc])
 
 ## Contributing
 
-Fork the repository and use basic `GitFlow`.
+Fork the repository, use basic `GitFlow` and `semantic-release`.
 Further rules will be specified if the need arises.
 
 ## License
