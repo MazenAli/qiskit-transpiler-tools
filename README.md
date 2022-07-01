@@ -20,7 +20,7 @@ Or simply include the root directory in your `python` search path.
 ## Usage
 
 At the moment, there is only one transpiler class implementing the simple
-pipeline gate translation -> layout optimization -> noise aware mapping
+pipeline: gate translation -> layout optimization -> noise aware mapping
 (mapomatic) -> dynamic decoupling.
 
 Import the class:
