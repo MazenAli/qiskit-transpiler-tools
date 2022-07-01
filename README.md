@@ -26,7 +26,7 @@ pipeline: gate translation -> layout optimization -> noise aware mapping
 Import the class:
 
 ```python
-from qiskit iskit_transpiler_tools.transpiler import TranspilerSabreMapomaticDD
+from qiskit_transpiler_tools.transpiler import TranspilerSabreMapomaticDD
 ```
 
 Construct a circuit `qc` or a list of circuits `qc_list`, load your `backend`.
