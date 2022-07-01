@@ -36,14 +36,12 @@ Apply different transpiler configurations:
 transpiler_default = TranspilerSabreMapomaticDD(backend) # default options
 transpiler1        = TranspilerSabreMapomaticDD(backend,
                                                 optimization_level=3,
-                                                num_transpilations=10) # layout
-optimization
+                                                num_transpilations=10) # layout optimization
 transpiler2        = TranspilerSabreMapomaticDD(backend,
                                                 optimization_level=3,
                                                 num_transpilations=10,
                                                 apply_mapomatic=True,
-                                                apply_dd=True) # add noise
-aware transpilation and dynamic decoupling
+                                                apply_dd=True) # add noise aware transpilation and dynamic decoupling
 
 qc_trans       = transpiler_default.transpile(qc)
 qc_list_trans1 = transpiler1.transpile(qc_list)
