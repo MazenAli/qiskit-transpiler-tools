@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Qiskit transpilation pipeline for IBM backends.
 """
@@ -47,18 +46,6 @@ class Transpiler(ABC):
 class TranspilerSabreMapomaticDD(Transpiler):
     """Transpilation pipeline for IBM backends.
     Includes level 3 SABRE swap optimization, mapomatic noise-sensitive layout selection and elementary XX dynamic decoupling.
-    
-    Default options are:
-        optimization_level = 0     # connectivity layout optimization, levels 0 - 3 available
-        num_transpilations = 1     # number of times transpilation is repeated, best layout selected
-        seed_transpiler    = None  # each run can yield different layouts, seed for reproducibility
-                                   # input is a list of size num_transpilations
-
-        cost_transpile     = None  # score function for layouts, default is a weighted sum = 1*depth + 20*num_cnots
-        apply_mapomatic    = False # noise-sensitive layout optimization
-        cost_mapomatic     = None  # score function for mapomatic, default is mapomatic default
-        apply_dd           = False # apply dynamic decoupling
-        dd_passmanager     = None  # pass manager for DD, default is ALAP scheduling with XX decoupling
         
     Example 1:
         transpiler = TranspilerSabreMapomaticDD(backend)
@@ -83,8 +70,14 @@ class TranspilerSabreMapomaticDD(Transpiler):
     Parameters
     ----------
     backend : Target backend for transpilation.
-        
-    options : Transpilation options.
+    optimization_level : Connectivity layout optimization, levels 0 - 3 available.
+    num_transpilations : Number of times transpilation is repeated, best layout selected.
+    seed_transpiler : Each run can yield different layouts, seed for reproducibility, input is a list of size num_transpilations.
+    cost_transpile : Score function for layouts, default is a weighted sum = 1*depth + 20*num_cnots.
+    apply_mapomatic : Noise-sensitive layout optimization.
+    cost_mapomatic : Score function for mapomatic, default is mapomatic default.
+    apply_dd : Apply dynamic decoupling.
+    dd_passmanager : Pass manager for DD, default is ALAP scheduling with XX decoupling.
     """
     
     

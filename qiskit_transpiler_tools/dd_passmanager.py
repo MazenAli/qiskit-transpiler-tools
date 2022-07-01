@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Qiskit passmanagers for dynamic decoupling on IBM backends.
 """
