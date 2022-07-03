@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "qiskit_transpiler_tools"
-version = "0.1.0"
+version = "0.1.1"
 description = "Basic qiskit tools to streamline transpilation"
 authors = ["Mazen Ali <mazen.ali@itwm.fraunhofer.de>"]
 
